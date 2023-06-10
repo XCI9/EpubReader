@@ -1,0 +1,44 @@
+#fullscreenbg{
+	background-color:rgba(0,0,0,0.5);
+	position:fixed;
+	top:0%;
+	left:0%;
+	height:100%;
+	width:100%;
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+}
+		
+#fullscreenimg{
+	margin: auto;
+	line-height: 1;
+}
+.rotate{
+	position:absolute;
+	top:0%;
+	height:20px;
+	width:20px;
+	writing-mode: vertical-rl;
+	transform: translate(-50%);
+	z-index:1;
+	border: none;
+	background-color: Transparent;
+    background-repeat:no-repeat;
+}
+
+.rotate:focus{
+	outline: none;
+}
+
+.rotate:hover{
+	background-color:rgba(200,200,200,.5);
+}
+
+#rotateL{
+	left: 10%;
+}
+#rotateR{
+	left: calc(10% + 20px);
+}
+

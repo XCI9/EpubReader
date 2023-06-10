@@ -1,0 +1,298 @@
+/*
+:root{
+	--scrollwidth:100px;
+}*/
+body{
+	overflow-x:scroll;
+	background-color:#000000;
+}
+body::-webkit-scrollbar{display:none}
+sidebar {
+  height: 100%;
+  width: 25%;
+  min-width:10em;
+  position: fixed;
+  z-index: 4;
+  visibility:hidden;
+  top: 0%;
+  left: 0%;
+  background-color: #111;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+setting {
+  height:auto;
+  width: 5.5em;
+  position: fixed;
+  z-index: 0;
+  visibility:hidden;
+  top: 0%;
+  right: 0%;
+  background-color: #111;
+  overflow-x: hidden;
+  white-space: nowrap;
+  z-index:3;
+  cursor:default;
+}
+setting > div{
+  text-align:center;
+  margin: 8px;
+  color: #DDDDDD;
+  display: block;
+}
+setting > div:hover{
+  text-align:center;
+  margin: 8px;
+  color: #DDDDDD;
+  display: block;
+  font-weight:bold;
+}
+content {
+  display:block;
+  margin-left:8px;
+}
+
+
+content > a {
+  padding:8px 0px;
+  font-size: 100%;
+  color: #818181;
+  display: block;
+  overflow-x: scroll;
+  white-space: nowrap; 
+  width:calc(100% - 5px);
+  /*
+  animation-fill-mode:both;
+  animation-play-state:paused;
+  animation-name:autoscroll;
+  animation-duration:2s;
+  animation-iteration-count:infinite;
+  animiation-direction:alternate;
+  animation-timing-function:linear;
+  */
+}
+
+content > div {
+
+  font-size: 100%;
+  display: block;
+  position: relative;
+  white-space: nowrap; 
+  left:-8px;
+}
+
+content > div > a {
+  padding:8px 0px;
+  color: #818181;
+  display: block;
+  position: relative;
+  width:calc(100% - 1em);
+  overflow-x: scroll;
+  white-space: nowrap; 
+}
+
+content > div > button {
+  padding:4px 8px;
+  color: #818181;
+  position:absolute;
+  right:-8px;
+  top:0%;
+  height:100%;
+  white-space: nowrap; 
+  font-size:120%;
+  background-repeat:no-repeat;
+  outline:none;
+  border: none;
+  background-color: Transparent;
+}
+
+content > div > button:hover{
+	color: #FFFFFF;
+}
+
+content > a::-webkit-scrollbar{display:none}
+content > div> a::-webkit-scrollbar{display:none}
+
+content > a:hover,content > div> a:hover {
+  color: #f1f1f1;
+  /*animation-play-state:running;*/
+}
+/*
+@keyframes autoscroll{
+	0%{
+		margin-left:0%;
+	}
+	100%{
+		margin-left:(var --scrollwidth,-100%);
+	}
+}
+*/
+sidebar bookname{
+  text-align:center;
+  overflow-x: scroll;
+  line-height: 1.5;
+  font-size: 125%;
+  color: #DDDDDD;
+  display: block;
+  font-weight:bold;
+  overflow-y: hidden;
+}
+bookname::-webkit-scrollbar{display:none}
+
+sidebar > content{
+  
+  display:block;
+  position:relative;
+  height:calc(100% - 50px);
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+
+sidebar > content::-webkit-scrollbar{display:none}
+
+main sidebar {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+close{
+	position:absolute;
+	right:5px;
+	top:-2px;
+	font-size:150%;
+	color:#dddddd;
+	cursor:default;
+}
+close:hover{
+	font-weight:bold;
+	color:#FFFFFF;
+}
+
+input[type="color"]{
+	width:15px;
+	height:15px;
+	border:none;
+	border-top:50px;
+	-webkit-appearance: none;
+	border-color: transparent;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+#SidebarTrigger{
+  position:fixed;
+  top:0%;
+  left:0%;
+  width:1em;
+  padding:0.5em;
+  min-width:10px;
+  height:1em;
+  background-color:transparent;
+  z-index:2;
+  display:block;
+  border-radius: 50%;
+  color:transparent;
+  line-height:1em;
+}
+#SidebarTrigger:hover{
+  background-color:rgba(0,0,0,0.1);
+  color:rgba(255,255,255,0.75);
+  cursor:default;
+}
+
+
+#OptionTrigger{
+  position:fixed;
+  top:0%;
+  right:0%;
+  width:1em;
+  padding:0.5em;
+  min-width:10px;
+  height:1em;
+  background-color:transparent;
+  z-index:2;
+  display:block;
+  border-radius: 50%;
+  color:transparent;
+  line-height:1em;
+  cursor:default;
+  z-index:3;
+}
+#OptionTrigger:hover{
+  background-color:rgba(0,0,0,0.1);
+  color:rgba(255,255,255,0.75);;
+}
+
+#option{
+	border:5px;
+	position:fixed;
+	top:50%;
+	height:50%;
+	left:70%;
+	width:70%;
+	transform: translate(-75% , -50%);
+	background:#000000;
+	display:none;
+	color:#dddddd;
+	padding:2em;
+	z-index:2;
+	overflow:auto;
+}
+
+#option > div{
+	margin-top:1em;
+}
+
+#enter{
+	position:absolute;
+	top:calc(100% - 2.7em);
+	right:1em;
+}
+
+#main {
+  padding: 0px;
+  /*margin-left: 25%;
+  width:calc(75% + 3px);
+  transition-property: margin-left,width;
+  transition-duration: 0.5s, 0.5s;*/
+  display:inline;
+  z-index:0;
+  position:absolute;
+  left:0px;
+  top:0%;
+  width:100%;
+  height:100%;
+}
+
+.currentcontent{
+	font-weight:bold; 
+	color:#FFFFFF;
+}
+/*
+bookname{
+  animation-name: move;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  position: absolute;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+sidebar > div{
+  position: relative;
+  height:calc(1.2em + 16px);
+}*/

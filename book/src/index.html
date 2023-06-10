@@ -1,0 +1,105 @@
+<html>
+    <head>
+    	<link rel="icon" href="data:,">
+    	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" defer></script>-->
+    	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" defer></script>
+		<script src="epub.js" defer></script>
+    	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    	<meta content="utf-8" http-equiv="encoding">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="Styles/style.css" rel="stylesheet" type="text/css"/>
+	<link href="epub.css" rel="stylesheet" type="text/css"/>
+
+	<title>刀劍神域Progressive 001</title>
+</head>
+<body onload="init()">
+    	<div id="SidebarTrigger" onclick="showSidebar()">☰</div>
+    	<sidebar onmouseleave="hideSidebar()">
+			<!--div--><bookname>刀劍神域Progressive 001</bookname><!--/div-->
+		<content>
+			<a href="javascript:changeSrc('Text/cover.html');" style="margin-left:0em">封面</a>
+			<a href="javascript:changeSrc('Text/introduction.html');" style="margin-left:0em">簡介</a>
+			<a href="javascript:changeSrc('Text/illustration1.html');" style="margin-left:0em">彩頁</a>
+			<a href="javascript:changeSrc('Text/contents.html');" style="margin-left:0em">目錄</a>
+			<content>
+				<div><a href="javascript:changeSrc('Text/chapter1.html');" style="margin-left:0em">無星夜的詠歎調</a><button>–</button></div>
+				<a href="javascript:changeSrc('Text/chapter1.html');" style="margin-left:1em">1</a>
+				<a href="javascript:changeSrc('Text/chapter2.html');" style="margin-left:1em">2</a>
+				<a href="javascript:changeSrc('Text/chapter3.html');" style="margin-left:1em">3</a>
+				<a href="javascript:changeSrc('Text/chapter4.html');" style="margin-left:1em">4</a>
+				<a href="javascript:changeSrc('Text/chapter5.html');" style="margin-left:1em">5</a>
+				<a href="javascript:changeSrc('Text/chapter6.html');" style="margin-left:1em">6</a>
+				<a href="javascript:changeSrc('Text/chapter7.html');" style="margin-left:1em">7</a>
+				<a href="javascript:changeSrc('Text/chapter8.html');" style="margin-left:1em">8</a>
+				<a href="javascript:changeSrc('Text/chapter9.html');" style="margin-left:1em">9</a>
+				<a href="javascript:changeSrc('Text/chapter10.html');" style="margin-left:1em">10</a>
+				<a href="javascript:changeSrc('Text/chapter11.html');" style="margin-left:1em">11</a>
+				<a href="javascript:changeSrc('Text/chapter12.html');" style="margin-left:1em">12</a>
+				<a href="javascript:changeSrc('Text/chapter13.html');" style="margin-left:1em">13</a>
+				<a href="javascript:changeSrc('Text/chapter14.html');" style="margin-left:1em">14</a>
+				<a href="javascript:changeSrc('Text/chapter15.html');" style="margin-left:1em">15</a>
+				</content>
+			<a href="javascript:changeSrc('Text/chapter16.html');" style="margin-left:0em">幕間 鬍鬚的理由</a>
+			<content>
+				<div><a href="javascript:changeSrc('Text/chapter17.html');" style="margin-left:0em">幻矓劍之迴旋曲</a><button>–</button></div>
+				<a href="javascript:changeSrc('Text/chapter17.html');" style="margin-left:1em">1</a>
+				<a href="javascript:changeSrc('Text/chapter18.html');" style="margin-left:1em">2</a>
+				<a href="javascript:changeSrc('Text/chapter19.html');" style="margin-left:1em">3</a>
+				<a href="javascript:changeSrc('Text/chapter20.html');" style="margin-left:1em">4</a>
+				<a href="javascript:changeSrc('Text/chapter21.html');" style="margin-left:1em">5</a>
+				<a href="javascript:changeSrc('Text/chapter22.html');" style="margin-left:1em">6</a>
+				<a href="javascript:changeSrc('Text/chapter23.html');" style="margin-left:1em">7</a>
+				<a href="javascript:changeSrc('Text/chapter24.html');" style="margin-left:1em">8</a>
+				<a href="javascript:changeSrc('Text/chapter25.html');" style="margin-left:1em">9</a>
+				<a href="javascript:changeSrc('Text/chapter26.html');" style="margin-left:1em">10</a>
+				<a href="javascript:changeSrc('Text/chapter27.html');" style="margin-left:1em">11</a>
+				<a href="javascript:changeSrc('Text/chapter28.html');" style="margin-left:1em">12</a>
+				<a href="javascript:changeSrc('Text/chapter29.html');" style="margin-left:1em">13</a>
+				<a href="javascript:changeSrc('Text/chapter30.html');" style="margin-left:1em">14</a>
+				</content>
+			<a href="javascript:changeSrc('Text/postscript.html');" style="margin-left:0em">後記</a>
+		</content>
+	</sidebar>
+	<div id="main">
+    	<iframe onload="iframe_init()" id="ebook" src="Text/cover.html" width="100%" height="100%" frameborder="0"></iframe>
+	</div>
+    
+<div id="OptionTrigger" onclick="showOption()">&#9881;</div>
+	<setting onmouseleave="hideOption()">
+		<div><input id="fullscreen" type="checkbox" onchange="fullscreen()"><label for="fullscreen"> 全螢幕</label></div>
+		<div onclick="option()">顯示設定</div>
+	</setting>
+	
+	<div id="option">
+		<close onclick="closeOption()">×</close>
+		<div><input id="mode_scroll" type="radio" name="readermode" onchange="modeswitch()" checked><label for="mode_scroll"> 連續</label>
+			<input id="mode_paged" type="radio" name="readermode" onchange="modeswitch()"><label for="mode_paged"> 分頁</label>
+			<input id="mode_paged_two" type="checkbox" onchange="optionRefresh()"><label for="mode_paged_two"> 雙頁</label>
+			</div>
+		<div><label for="font_size">文字</label>
+			<input id="font_size" type="number" step="5" min="50" max="200" value="100" onchange="optionRefresh()">%</div>
+		<div><label for="p_line_height">行高</label>
+			<input id="p_line_height" type="number" step="0.1" min="1" max="5" value="1" onchange="optionRefresh()"></div>
+		<div><label for="p_space">段距</label>
+			<input id="p_space" type="number" step="0.1" min="0" max="5" value="0" onchange="optionRefresh()"></div>
+		<div>邊界
+			<label for="body_margin_rl">左右</label>
+			<input id="body_margin_rl" type="number" step="0.1" min="0" max="20" value="0" onchange="optionRefresh()">
+			<label for="body_margin_tb">上下</label>
+			<input id="body_margin_tb" type="number" step="0.1" min="0" max="20" value="0" onchange="optionRefresh()"></div>
+		<div>方向
+			<input id="writing_mode_v" type="radio" name="writing_mode" onchange="writing_mode_refresh()"><label for="writing_mode_v">直式</label>
+		    <input id="writing_mode_h" type="radio" name="writing_mode" onchange="writing_mode_refresh()" checked><label for="writing_mode_h">橫式</label></div>
+		<div>模式
+			<input id="light_mode" type="radio" name="display_mode" onchange="optionRefresh()" checked><label for="light_mode">淺色</label>
+			<input id="dark_mode" type="radio" name="display_mode" onchange="optionRefresh()"><label for="dark_mode">深色</label>
+			<input id="eyes_mode" type="radio" name="display_mode" onchange="optionRefresh()"><label for="eyes_mode">護眼</label>
+			<input id="custom_mode" type="radio" name="display_mode" onchange="optionRefresh()"><label for="custom_mode">自訂</label>
+				<div id="custom_mode_color">&nbsp;&nbsp;&nbsp;&nbsp;
+					<label for="custom_mode_bgc">背景</label><input id="custom_mode_bgc" type="color" onchange="optionRefresh()" value="#FFFFFF">
+					<label for="custom_mode_fc">文字</label><input id="custom_mode_fc" type="color" onchange="optionRefresh()" ></div></div>
+		<div><label for="customcss">自訂css</label>&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="customcss_refresh()">更新</button><br/>
+			<textarea id="customcss" name="customcss" rows="4" cols="50"></textarea></div>
+	</div>
+</body>
+</html>
